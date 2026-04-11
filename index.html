@@ -51,7 +51,7 @@
             <li></li>
             <li></li>
             <li></li>
-    <li></li>
+            <li></li>
          </ul>
 
     <div class="pages">
@@ -146,8 +146,129 @@
                 </div>
 
             </div> <!-- Closes .home-right -->
-
         </div> <!-- Closes .page -->
+    
+    <!--projects page-->
+    <div class="page" id="page-projects">
+        <div class="projects-grid" id ="projects-grid">
+            <div class="projects-header">
+                <h2 class="projects-title">Overall <em> Projects</em></h2>
+                <div class="projects-count">04 projects · 2025-2026</div>
+            </div>
+
+            <div class="projects-cards">
+                <div class="project-card" onclick="openProject(0)">
+                    <div class="project-card-img" style="background: #1a2a1a;">
+                        <div class="project-card-placeholder">
+                            <span>Full-Stack Insight Finanace Analyzer</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="project-card-body">
+                            <div class="project-card-num">01 - Full Stack</div>
+                            <div class="project-card-title">Full-Stack Finance Insight Analyzer</div>
+                            <div class="project-card-desc">A full-stack web application for tracking and visualizing travel expenses.</div>
+                            <div class="project-card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">React</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProject(1)">
+                    <div class="project-card-img" style="background: #1a1208;">
+                        <div class="project-card-placeholder">
+                            <span>Audio Amplifier</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card-body">
+                        <div class="project-card-num">02 - Hardware</div>
+                        <div class="project-card-title">Audio Amplifier - PCB Design</div>
+                        <div class="project-card-desc">Designed, simulated, and hand-soldered a working audio amplifier circuit.</div>
+                        <div class="project-card-tags">
+                            <span class="tag">LTspice</span>
+                            <span class="tag">Kicad</span>
+                            <span class="tag">Soldering</span>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="project-card" onclick="openProject(2)">
+                        <div class="project-card-img" style="background: #1a1a2a;">
+                            <div class="project-card-placeholder">
+                                <span>ASL Translator</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-body">
+                            <div class="project-card-num">03 - Computer Vision</div>
+                            <div class="project-card-title">American Sign Language - Hand Detector Translator </div>
+                            <div class="project-card-desc">Real-time American Sign Language recognition using OpenCV and MediaPipe.</div>
+                            <div class="project-card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">MediaPipe</span>
+                                <span class="tag">NumPy</span>
+                            </div>
+                        </div>
+                    </div>               
+
+                <div class="project-card" onclick="openProject(3)">
+                    <div class="project-card-img" style="background: #0d1f18;">
+                        <div class="project-card-placeholder">
+                            <span>Computer Engineering Portfolio Website</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-body">
+                        <div class="project-card-num">04 - Web Dev</div>
+                        <div class="project-card-title">Personal Portfolio Website</div>
+                        <div class="project-card-desc">A personal portfolio website showcasing my projects and experience.</div>
+                        <div class="project-card-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--case study view (when the card is clicked)-->
+        <div class="project-detail" id="project-detail">
+            <button class="back-btn" onclick="closeProject()">← back to projects</button>
+            <div class="detail-hero" id="detail-hero"></div>
+
+            <div class="detail-content">
+                <div class="detail-num" id="detail-num"></div>
+                <h2 class="detail-title" id="detail-title"></h2>
+
+                <div class="detail-meta">
+                    <div class="detail-meta-item">
+                        <div class="detail-meta-label">Role</div>
+                        <div class="detail-meta-val" id="detail-role"></div>
+                    </div>
+                    <div class="detail-meta-item">
+                        <div class="detail-meta-label">Timeline</div>
+                        <div class="detail-meta-val" id="detail-timeline"></div>
+                    </div>
+                    <div class="detail-meta-item">
+                        <div class="detail-meta-label">Stack</div>
+                        <div class="detail-meta-val" id="detail-stack"></div>
+                    </div>
+                </div>
+                <p class="detail-body" id="detail-body"></p>
+                <div class="detail-tags" id="detail-tags"></div>
+
+            </div>
+        </div>
+    </div>
+
     </div> <!-- Closes .pages -->
     </div> <!-- Closes .app div -->
     <!--JavaScript Source added-->

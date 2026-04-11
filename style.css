@@ -563,6 +563,7 @@ body.dark .home-right::after {
 #page-projects {
     position:relative;
     overflow-y:auto;
+    height: 100%;
 }
 
 .projects-grid {
@@ -576,5 +577,248 @@ body.dark .home-right::after {
     justify-content:space-between;
     margin-bottom:36px;
     padding-bottom:20px;
+    padding-left:0;
     border-bottom: 1px solid var(--cream-darker);
+}
+
+.projects-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 40px;
+    color: var(--ink);
+    font-weight: 400;
+}
+
+.project-title em {
+    font-style: italic;
+    color: var(--green);
+}
+.projects-count {
+    font-family: 'Geist Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    letter-spacing:1px;
+}
+
+/* Project Card Format (Grid should be 2 columns) */
+.projects-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--cream-darker);
+    border: 1px solid var(--cream-darker);
+}
+
+.project-card {
+    background:var(--cream);
+    cursor: pointer;
+    transition:background 0.2s;
+    position:relative;
+    overflow:hidden;
+}
+
+.project-card:hover {
+    background:var(--cream-dark);
+}
+
+/*green line slider*/
+.project-card::after {
+    content:'';
+    position:absolute;
+    bottom:0; left:0; right:0;
+    height:3px;
+    background: var(--green);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 0.3s ease;
+}
+
+.project-card:hover::after {
+    transform:scaleX(1);
+}
+
+/* IMAGE PLACEMENTS!!!! */
+.project-card-img {
+    height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.project-card-placeholder {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color:rgba(255,255,255,0.3);
+    letter-spacing:2px;
+    text-align:center;
+    text-transform:uppercase;
+    padding: 0 20px;
+}
+
+.project-card-img img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position:absolute;
+    inset:0;
+}
+
+.project-card-body {
+    padding:24px;
+}
+
+.project-card-body {
+    font-family: 'Geist Mono', monospace;
+    font-size:9px;
+    letter-spacing:2px;
+    color:var(--ink-faint);
+    text-transform:uppercase;
+    margin-bottom: 8px;
+}
+.project-card-title {
+    font-family: 'Instrument Serif', serif;
+    font-size:20px;
+    color: var(--ink);
+    margin-bottom:10px;
+    line-height: 1.2;
+}
+
+.project-card-desc {
+    font-size: 13px;
+    font-family: 'Lora', serif;
+    color: var(--ink-mid);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    text-transform: none;
+}
+
+.project-card-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 3px 9px;
+    border: 1px solid var(--cream-darker);
+    color: var(--ink-light);
+    text-transform: uppercase;
+}
+
+/*project detail view -> should only be shown when the card is clicked */
+.project-detail {
+    display: none;    /* hidden by default */
+    padding: 40px 56px;
+    min-height: 100%;
+    animation: fadeUp 0.3s ease;
+}
+
+/* shown when JS adds the "open" class */
+.project-detail.open {
+    display: block;
+}
+
+.projects-grid.hidden {
+    display: none;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-btn {
+    font-family: 'Geist Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid var(--cream-darker);
+    color: var(--ink-light);
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-bottom: 48px;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.detail-hero {
+    width: 100%;
+    height: 360px;
+    background: var(--cream-dark);
+    border: 1px solid var(--cream-darker);
+    margin-bottom: 40px;
+    /* real photo goes here later */
+}
+
+.detail-content {
+    max-width: 720px;
+}
+
+.detail-num {
+    font-family: 'Geist Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.detail-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 44px;
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.05;
+    margin-bottom: 32px;
+}
+
+.detail-meta {
+    display: flex;
+    gap: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--cream-darker);
+    margin-bottom: 32px;
+}
+
+.detail-meta-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.detail-meta-val {
+    font-size: 14px;
+    color: var(--ink-mid);
+}
+
+.detail-body {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+    margin-bottom: 32px;
+}
+
+.detail-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
