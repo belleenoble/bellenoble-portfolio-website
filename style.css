@@ -1180,3 +1180,328 @@ body.dark .home-right::after {
 .detail-photo-slot:hover img {
     transform: scale(1.04);
 }
+
+/*About me page ! (Educational perspective) */
+#page-about{
+    overflow-y:auto;
+}
+
+.about-blob1 {
+    position: absolute;
+    width: 320px; height: 280px;
+    background: #d4ecc0; opacity:0.6;
+    top:-60px; right: -60px;
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+    z-index: 0; pointer-events: none;
+}
+
+.about-blob2 {
+    position: absolute;
+    width: 220px; height: 200px;
+    background: #b8dd94; opacity:0.4;
+    bottom:40px; left: 40px;
+    border-radius: 40% 60% 30% 70% / 60% 50% 50% 40%;
+    z-index: 0; pointer-events: none;
+}
+
+body.dark .about-blob1 { background: #2a5a1a; opacity:0.3;}
+body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100%;
+    position:relative;
+    z-index: 1;
+}
+
+/*top left of page (photo and initials and name) */
+.about-left {
+    padding: 40px;
+    border-right: 1px solid var(--cream-darker);
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.about-photo-row {
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.about-photo{
+    width:72px; height:72px;
+    border-radius:50%;
+    background: var(--green);
+    border: 3px solid var(--green-light);
+    flex-shrink:0;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.about-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute; inset: 0;
+    border-radius: 50%;
+}
+
+.about-initials {
+    font-family: 'Geist Mono', monospace;
+    font-size: 20px; color: #fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.about-name {
+    font-family: 'Instrument Serif',serif;
+    font-size: 30px; color: var(--ink);
+    line-height:1.05;
+}
+
+.about-name em { font-style: italic; color: var(--green); }
+
+.about-sub {
+    font-family: 'Geist Mono', monospace;
+    font-size:9px; color: var(--ink-light);
+    margin-top: 4px; letter-spacing: 1px;
+}
+
+/*buttons for linkedin-github-resume (represent stamps like on a passport) */
+.about-stamps {display: flex; gap: 10px; flex-wrap: wrap;}
+.about-stamp {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:4px;
+    padding: 10px 14px;
+    border:2px solid var(--green);
+    color: var(--green);
+    font-family:'Geist Mono', monospace;
+    cursor: pointer;
+    background: none;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.about-stamp:nth-child(2) {transform: rotate(-2deg); }
+.about-stamp:nth-child(3) {transform: rotate(1.5deg); }
+
+.about-stamp:hover {
+    background: var(--green-faint);
+    transform: rotate(0deg) translateY(-2px);
+}
+
+.about-stamp-label {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/*bio*/
+
+.about-bio {
+    font-size: 13px; color: var(--ink-mid);
+    line-height: 1.8;
+    padding: 12px 16px;
+    border-left: 3px solid var(--green);
+    background: var(--green-faint);
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-section-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px; letter-spacing: 2.5px;
+    color: var(--green);
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cream-darker);
+}
+
+/*educational timeline*/
+
+.about-tl { display: flex; flex-direction: column; position: relative; }
+
+.about-tl::before {
+    content: '';
+    position: absolute;
+    left: 6px; top: 8px; bottom: 8px;
+    width: 1px;
+    background: var(--green);
+    opacity: 0.25;
+}
+
+.about-tl-item {
+    display: flex; gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.about-tl-item:last-child { margin-bottom: 0; }
+
+.about-tl-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--green);
+    flex-shrink: 0;
+    margin-top: 2px; z-index: 1;
+}
+
+.about-tl-dot.future {
+    background: var(--cream);
+    border: 2px solid var(--green);
+}
+
+.about-tl-year {
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px; color: var(--green);
+    margin-bottom: 3px;
+}
+
+.about-tl-school {
+    font-size: 13px; font-weight: 600;
+    color: var(--ink);
+}
+
+.about-tl-deg {
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px; color: var(--ink-light);
+    margin-top: 2px;
+}
+
+.about-tl-note {
+    font-size: 11px;
+    color: var(--ink);
+    line-height: 1.65;
+    margin-top: 5px;
+    font-style: italic;
+    word-wrap: break-word;
+}
+
+/* GPA badge */
+.about-tl-gpa {
+    display: inline-block;
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px;
+    color: var(--green);
+    background: var(--green-faint);
+    border: 1px solid var(--green);
+    padding: 2px 8px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+/* ── RIGHT ── */
+.about-right {
+    padding: 40px 44px;
+    display: flex; flex-direction: column;
+    gap: 28px;
+}
+
+/* skills */
+.about-skill-row {
+    display: flex; align-items: center;
+    gap: 10px; margin-bottom: 8px;
+}
+
+.about-skill-name {
+    font-family: 'Geist Mono', monospace;
+    font-size: 10px; color: var(--ink-mid);
+    min-width: 90px;
+}
+
+.about-skill-bar {
+    flex: 1; height: 4px;
+    background: var(--cream-darker);
+    border-radius: 2px; overflow: hidden;
+}
+
+.about-skill-fill {
+    height: 100%;
+    background: var(--green);
+    border-radius: 2px;
+}
+
+.about-skill-level {
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px; color: var(--ink-faint);
+    min-width: 70px; text-align: right;
+}
+
+/* small label above each category group */
+.about-skill-category-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding-left: 2px;
+}
+
+/* tag chips for frameworks and tools */
+.about-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.about-skill-tag {
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px;
+    padding: 4px 10px;
+    border: 1px solid var(--cream-darker);
+    color: var(--ink-mid);
+    background: var(--cream-dark);
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+
+.about-skill-tag:hover {
+    border-color: var(--green);
+    color: var(--green);
+    background: var(--green-faint);
+}
+
+/* experience */
+.about-exp-item {
+    padding: 14px 16px;
+    border-left: 2px solid var(--green);
+    background: var(--green-faint);
+    margin-bottom: 10px;
+}
+
+.about-exp-item:last-child { margin-bottom: 0; }
+
+.about-exp-title {
+    font-size: 13px; font-weight: 600;
+    color: var(--ink); margin-bottom: 3px;
+}
+
+.about-exp-org {
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px; color: var(--green);
+    margin-bottom: 2px;
+}
+
+.about-exp-date {
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px; color: var(--ink-faint);
+    margin-bottom: 8px;
+}
+
+.about-exp-desc {
+    font-size: 12px; color: var(--ink-mid);
+    line-height: 1.7;
+}
