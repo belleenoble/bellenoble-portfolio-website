@@ -44,7 +44,8 @@ HTML References:
     -https://developer.mozilla.org/en-US/docs/Web/HTML/Reference
     -https://codepel.com/
     -https://dev.to/warish/how-to-create-a-dark-mode-toggle-with-html-css-and-javascript-378m
-
+    -https://codezup.com/javascript-html5-interactive-web-pages/
+    
 CSS References:
     -https://www.w3schools.com/cssref/index.php
     -https://cssreference.io/ -> VISUAL EXAMPLES!!!!!
