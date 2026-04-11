@@ -1,0 +1,50 @@
+
+Portfolio Project: 
+    What Aspects that I want:
+    - Intereactive multipage portfolio
+    - Professional but creative portfolio that shows me as a student/person.
+    - Green Color
+
+    Structure:
+        Homepage -> Small About me
+            Contains: 
+                -Image of me
+                -Project Showcases
+                -Current Degree
+                -School
+                -Navigation Bar -> |Home|Projects|About Me| B-sides | Contact|
+                -status in terms of job/internship
+            Concepts Used:
+                -CSS Variables for color system
+                -Flexbox nav layout
+                -Active state buttons
+                -localStorage
+                -CSS Animations
+
+        Projects
+        Resume/About me
+        Contact
+        Bsides
+
+
+
+
+
+
+
+
+
+
+
+
+=============================================================================
+HTML References:
+
+    -https://htmldog.com/guides/html/intermediate/
+    -https://developer.mozilla.org/en-US/docs/Web/HTML/Reference
+    -https://codepel.com/
+    -https://dev.to/warish/how-to-create-a-dark-mode-toggle-with-html-css-and-javascript-378m
+
+CSS References:
+    -https://www.w3schools.com/cssref/index.php
+    -https://cssreference.io/ -> VISUAL EXAMPLES!!!!!

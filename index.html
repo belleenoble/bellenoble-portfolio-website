@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content = "width=device-width, intial-scale=1.0">
+
+    <title> Belle Noble - Computer Engineering Portfolio
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Load in fonts from GoogleAPI Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Navigation Bar-->
+         <nav>
+            <div class="nav-logo">B.N</div>
+            <div class="nav-links">
+                <button class="nav-link active" data-page="page-home">Home </button>
+                <button class="nav-link" data-page="page-projects">Projects </button>
+                <button class="nav-link" data-page="page-about">About Me</button>
+                <button class="nav-link" data-page="page-bsides">B-sides</button>
+                <button class="nav-link" data-page="page-contact">Contact </button>
+            </div>
+
+            <div class="nav-right">
+                <div class="nav-status">
+                    <div class="status-dot"></div>
+                    Open to Internships
+                </div>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="icon-moon">☽</span> 
+                    <span class="icon-sun">☀</span>
+                </button>
+            </div> <!-- Closes .nav-right -->
+         </nav>
+        
+         <!--animated background (found thru website listed on notes!)-->
+         <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    <li></li>
+         </ul>
+
+    <div class="pages">
+        <div class="page active" id="page-home">
+
+            <!--left column of homescreen-->
+            <div class="home-left">
+                <div class="home-top"> <!-- title and introduction-->
+                    <div class="home-eyebrow">Computer Engineering Portfolio · 2026 </div>
+                    <h1 class="home-name">Belle<br><em>Noble</em></h1>
+                    <p class="home-tagline">
+                        Hi, Im Belle! I'm a third-year Computer Engineering student at SJSU with experience in software and a growing interest in hardware.
+                        I enjoy building hands-on projects that explore both sides of computer engineering, especially where software and hardware come together.
+                        I am always looking for opportunities to keep learning, contribute t omeaningful work, and apply my skills in real-world systems. 
+                    </p>
+                    <div class="home-fields">
+
+                        <div class="home-field">
+                            <div class="field-label">Degrees</div>
+                            <div class="field-val">B.S Computer Engineering</div>
+                        </div>
+
+                        <div class="home-field">
+                            <div class="field-label">Status</div>
+                            <div class="field-val">Open to Internships</div>
+                        </div>
+
+                        <div class="home-field">
+                            <div class="field-label">Univeristy</div>
+                            <div class="field-val">San Jose State University</div>
+                        </div>
+
+                        <div class="home-field">
+                            <div class="field-label">Additional Degree</div>
+                            <div class="field-val">A.A - Lemoore College</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--bottom section (stamp)-->
+                <div class ="home-bottom">
+                    <div class="home-stamp">Internship Ready</div>
+                </div>
+
+            </div> <!-- Closes .home-left -->
+
+            <!--right side of the page (project showcases)-->
+            <div class="home-right">
+                <div class="column-strip-header">
+                    <div class="strip-label">Featured Work</div>
+                    <div class="strip-count">04 Projects</div>
+                </div>
+            
+                <div class="frames">
+
+                    <div class="frame">
+                        <div class="frame-num">01</div>
+                        <div class="frame-content">
+                            <div class="frame-title">Full-Stack Finance Insight Analyzer</div>
+                            <div class="frame-sub">Python · FastAPI · HTML · CSS · JS · React · Git</div>
+                        </div>
+                        <div class ="frame-arrow">→</div>
+                    </div>
+
+                    <div class="frame">
+                        <div class="frame-num">02</div>
+                        <div class="frame-content">
+                            <div class="frame-title">American Sign Language Recognition</div>
+                            <div class="frame-sub">Python · OpenCV · MediaPipe · NumPy</div>
+                        </div>
+                        <div class ="frame-arrow">→</div>
+                    </div>
+
+                    <div class="frame">
+                        <div class="frame-num">03</div>
+                        <div class="frame-content">
+                            <div class="frame-title">Audio Amplifier Project - CMPE 110</div>
+                            <div class="frame-sub">LTSpice · Kicad · Soldering </div>
+                        </div>
+                        <div class ="frame-arrow">→</div>
+                    </div>
+
+                    <div class="frame">
+                        <div class="frame-num">04</div>
+                        <div class="frame-content">
+                            <div class="frame-title">Personal Computer Engineering Portfolio</div>
+                            <div class="frame-sub">HMTL · CSS · JavaScript </div>
+                        </div>
+                        <div class ="frame-arrow">→</div>
+                    </div>
+
+                </div>
+
+            </div> <!-- Closes .home-right -->
+
+        </div> <!-- Closes .page -->
+    </div> <!-- Closes .pages -->
+    </div> <!-- Closes .app div -->
+    <!--JavaScript Source added-->
+    <script src="script.js"></script>
+</body>
+</html>
