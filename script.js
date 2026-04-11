@@ -88,6 +88,13 @@ const projects = [
             'Working on adding visualizations for spending breakdowns by category and month',
             'Working more on the UI of the entire web application'
         ],
+        //
+        //initalImage: ' images/image.png
+        //photoFiles: [
+        //      'images/image1.png',
+        //]
+        //
+
         photos: ['UI dashboard', 'Expense Input Form', 'Charts View', 'API structure'],
         challenges:[
             {title:'State Management', text:'I struggled with keeping the frontend in sync with the backend data, while this was my first project working with a full-stack pipeline.'},
@@ -130,6 +137,10 @@ const projects = [
             'Transffered schematic to Kicad and assigned footprints to all components',
             '[IN PROGRESS] Currently working on PCB layout by placing components and rounting traces',
             '[IN PROGRESS] Plan to send board for fabrication, hand-solder components, and test functionality'
+        ],
+        heroImage: 'images/audio-amplifier-kicad-schem.png',
+        photoFiles: [
+            'images/audio-amplifier-kicad-schem.png'
         ],
         photos: ['LTSpice schematic', 'Kicad PCB Layout', 'Soldered Board', 'Test Setup'],
         challenges: [
@@ -227,7 +238,13 @@ function openProject(i) {
 
     //initial image
     const heroEl = document.getElementById('detail-hero');
-    heroEl.innerHTML = '<span class="detail-hero-placeholder">photo coming soon</span>';
+    if(p.heroImage) {
+        heroEl.innerHTML=`<img src="${p.heroImage}"
+            alt="${p.title}"
+            style="width:100%; height:100% object-fit:cover;">`;
+    } else {
+    heroEl.innerHTML = '<span class="detail-hero-placeholder">photo coming soon</span>'; 
+    }   
 
     //process / steps
 
@@ -246,10 +263,23 @@ function openProject(i) {
         // photo placeholders
     const photosEl = document.getElementById('detail-photos');
     photosEl.innerHTML = '';
-    p.photos.forEach(function(label) {
+    p.photos.forEach(function(label, index) {
         const div = document.createElement('div');
         div.className = 'detail-photo-slot';
-        div.innerHTML = `<div class="detail-photo-label">${label}</div>`;
+        
+        //checking if real photo in this slot
+        if (p.photoFiles && p.photoFiles[index]) {
+            div.innerHTML = `<img src="${p.photoFiles[index]}" 
+            alt="${label}" 
+            style="width:100%; height:100%; object-fit:cover;">`;
+
+            /*clicking the slot opens the lightbox*/
+            div.onclick = function() {
+                openLightbox(p.photoFiles[index], label);
+            }
+        } else {
+            div.innerHTML = `<div class="detail-photo-label">${label}</div>`;
+        }
         photosEl.appendChild(div);
     });
 
@@ -291,4 +321,21 @@ function openProject(i) {
 function closeProject() {
     document.getElementById('project-detail').classList.remove('open');
     document.getElementById('projects-grid').classList.remove('hidden');
+}
+
+//for lightbox only opens when the photo is clicked
+function openLightbox(src, caption) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-caption').textContent = caption;
+    document.getElementById('lightbox').classList.add('open');
+
+    //esc can make it close
+    document.addEventListener('keydown',function(e) {
+        if (e.key === 'Escape') closeLightbox();
+    });
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.getElementById('lightbox-img').src = '';
 }

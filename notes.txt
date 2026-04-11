@@ -22,7 +22,24 @@ Portfolio Project:
                 -CSS Animations
 
         Projects
+            Contains: 
+                -Image 
+                -overview
+                -steps /process
+                -challenges
+                -outcome
+                -tech stack
+            Contraits:
+                -> Contraint found, with the file tree layout the photos are too small, make it so that it pops out?
+
         Resume/About me
+            Contains: 
+                -educational timeline
+                -image of me
+                -relavant courses
+                -organizations im participating in
+                - summary of who i am and why i chose computer engineering
+                -skillset
         Contact
         Bsides
 
@@ -39,13 +56,14 @@ Portfolio Project:
 
 =============================================================================
 HTML References:
-
+    -https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch
     -https://htmldog.com/guides/html/intermediate/
     -https://developer.mozilla.org/en-US/docs/Web/HTML/Reference
     -https://codepel.com/
     -https://dev.to/warish/how-to-create-a-dark-mode-toggle-with-html-css-and-javascript-378m
     -https://codezup.com/javascript-html5-interactive-web-pages/
-    
+
 CSS References:
     -https://www.w3schools.com/cssref/index.php
     -https://cssreference.io/ -> VISUAL EXAMPLES!!!!!
+    https://css-tricks.com/svg-path-syntax-illustrated-guide/

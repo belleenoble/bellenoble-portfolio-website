@@ -1080,3 +1080,103 @@ body.dark .home-right::after {
     gap:8px;
     flex-wrap: wrap;
 }
+
+/*light box (late add bc photos are small in projects details */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    display: none;              /* hidden by default */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;            /* click anywhere to close */
+    padding: 40px;
+}
+
+/* shown when JS adds the "open" class */
+.lightbox.open {
+    display: flex;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;        /* keeps full image visible */
+    border-radius: 4px;
+    animation: scaleIn 0.2s ease;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.92); }
+    to   { transform: scale(1); }
+}
+
+.lightbox-caption {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: 'Geist Mono', monospace;
+}
+
+.lightbox-close:hover {
+    color: #fff;
+}
+
+.detail-photo-slot {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* the "click to expand" hint that appears on hover */
+.detail-photo-slot::after {
+    content: 'click to expand';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Geist Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px;
+    transform: translateY(100%);  /* hidden below the slot */
+    transition: transform 0.2s ease;
+}
+
+.detail-photo-slot:hover::after {
+    transform: translateY(0);    /* slides up on hover */
+}
+
+/* subtle zoom on hover */
+.detail-photo-slot img {
+    transition: transform 0.3s ease;
+}
+
+.detail-photo-slot:hover img {
+    transform: scale(1.04);
+}
