@@ -61,6 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     targetPage.classList.add('active');
                 }
 
+                // Re-align timeline dots when About page is shown
+                if (targetPageId === 'page-about') {
+                    setTimeout(alignTimeline, 0);
+                }
+
                 document.getElementById('projects-grid').classList.remove('hidden');
                 document.getElementById('project-detail').classList.remove('open');
                 
@@ -88,14 +93,15 @@ const projects = [
             'Working on adding visualizations for spending breakdowns by category and month',
             'Working more on the UI of the entire web application'
         ],
-        //
-        //initalImage: ' images/image.png
-        //photoFiles: [
-        //      'images/image1.png',
-        //]
-        //
 
-        photos: ['UI dashboard', 'Expense Input Form', 'Charts View', 'API structure'],
+        heroImage: 'images/hero-finance.png',
+        photoFiles: [
+            'images/finance-analyzer-dashboard-ui.png',
+            'images/csv.test.png',
+            null, // Charts photo coming soon
+            'images/api-structure.png.png'
+        ],
+        photos: ['UI dashboard', 'Expense Input Form', 'Charts View - Photo Coming Soon', 'API structure'],
         challenges:[
             {title:'State Management', text:'I struggled with keeping the frontend in sync with the backend data, while this was my first project working with a full-stack pipeline.'},
             {title: 'API Design', text: 'Designing clean REST endpoints that would be easy to consume from the frontend took more experimental coding  and research than expected.'}
@@ -116,6 +122,7 @@ const projects = [
             '[IN PROGRESS] Built classifier to map keypoint positions to ASL letters',
             'Added real-time overlay displaying the detected letter on the video feed'
         ],
+        
         photos: ['Live Demo', 'Hand Landmark Overlay', 'Detection Output' ,'Code Structure'],
         challenges: [
             {title: 'Similar hand shapes', text: 'There are some ASL letters that look nearly identical from one perspective, distinguishing them requires fine-tuning the keypoint thresholds, which I am still currently working on.'},
@@ -134,20 +141,23 @@ const projects = [
         body: 'Designed a complete audio amplifier circuit from schematic to physical board. Started in LTspice — simulating the circuit and verifying gain characteristics, then moved into KiCad for PCB layout and routing. Once fabricated, I hand-soldered every component and tested with a function generator and oscilloscope. My first full hardware project and the one that got me hooked on the hardware side of engineering.',
         steps:[
             'Designed schematic in LTspice and ran simulations to verify gain',
-            'Transffered schematic to Kicad and assigned footprints to all components',
+            'Transffered schematic to KiCad and assigned footprints to all components',
             '[IN PROGRESS] Currently working on PCB layout by placing components and rounting traces',
             '[IN PROGRESS] Plan to send board for fabrication, hand-solder components, and test functionality'
         ],
         heroImage: 'images/audio-amplifier-kicad-schem.png',
         photoFiles: [
-            'images/audio-amplifier-kicad-schem.png'
+            'images/audio-amplifier-kicad-schem.png',
+            'images/pcb.png',
+            null, // Soldered Board photo coming soon
+            null, // Test Setup photo coming soon
         ],
-        photos: ['LTSpice schematic', 'Kicad PCB Layout', 'Soldered Board', 'Test Setup'],
+        photos: ['KiCad schematic', 'KiCad PCB Layout', 'Soldered Board - Coming Soon', 'Test Setup - Coming Soon'],
         challenges: [
-            {title: 'PCB Trace Routing', text: 'Learning and understanding how to use Kicad to trace each routing path.'},
+            {title: 'PCB Trace Routing', text: 'Learning and understanding how to use KiCad to trace each routing path.'},
             {title: 'SMD Soldering', text: 'First time soldering components, currently in the process of learning how to prepare when my project gets to that point.'}
         ],
-        outcome: ' Expected Outcome: A working audio amplifier PCB that produces clean amlpifie audio.',
+        outcome: ' Expected Outcome: A working audio amplifier PCB that produces clean amplified audio.',
         tags: ['LTspice', 'KiCad', 'PCB', 'Soldering', 'Hardware']
     },
     {
@@ -162,6 +172,13 @@ const projects = [
             'Built multi-page navigation system using vanilla JavaScript',
             'Added dark mode toggle with localStorage persistence',
             'Implemented animated background and file tree case study layout'
+        ],
+        heroImage: 'images/port-UI .png',
+        photoFiles: [
+            'images/port-UI .png',
+            'images/project-page.png',
+            'images/dark-mode.png',
+            'images/case-study.png'
         ],
         photos: ['Home Page', 'Projects page', 'Dark Mode,' , 'Case study View'],
         challenges: [ 
@@ -183,6 +200,13 @@ const projects = [
             'Implemented linked list and piority que from scratch in C++',
             'Built CLI interface for adding, completing, and listing tasks',
             'Added sorting and filtering by priority and due date'
+        ],
+        heroImage: 'images/task-structure.png',
+        photoFiles: [
+            'images/task-structure.png',
+            'images/terminal demo.png',
+            'images/data-structure.png',
+            'images/output.png'
         ],
         photos: [ 'Terminal Demo', 'Data Structure Diagram', ' Code Strucutre', 'Output Example'],
         challenges: [
@@ -241,9 +265,9 @@ function openProject(i) {
     if(p.heroImage) {
         heroEl.innerHTML=`<img src="${p.heroImage}"
             alt="${p.title}"
-            style="width:100%; height:100% object-fit:cover;">`;
+            style="width:100%; height:100%; object-fit:cover;">`;
     } else {
-    heroEl.innerHTML = '<span class="detail-hero-placeholder">photo coming soon</span>'; 
+        heroEl.innerHTML = '<span class="detail-hero-placeholder">photo coming soon</span>'; 
     }   
 
     //process / steps
@@ -339,3 +363,138 @@ function closeLightbox() {
     document.getElementById('lightbox').classList.remove('open');
     document.getElementById('lightbox-img').src = '';
 }
+
+//travel carousel
+const carouselPlaces = [
+    {city: 'Tokyo, Japan', img: 'images/travel/tokyo.jpg'},
+    {city: 'Osaka, Japan', img: 'images/travel/osaka.jpg'},
+    {city: 'Kyoto, Japan', img: 'images/travel/kyoto.jpg'},
+    {city: 'Okinawa, Japan', img: 'images/travel/okinawa.jpg'},
+    {city: 'Iwakuni, Japan', img: 'images/travel/iwakuni.jpg'},
+    {city: 'Izu, Japan', img: 'images/travel/izu.jpg'},
+    {city: 'Jeju Island, South Korea', img: 'images/travel/jeju.jpg'},
+    {city: 'Ensenada, Mexico', img: 'images/travel/ensenada.jpg'},
+    {city: 'San Franscisco, CA', img: 'images/travel/sf.jpg'},
+    {city: 'Los Angeles, CA', img: 'images/travel/la.jpg'},
+    {city: 'Las Vegas, NV', img: 'images/travel/ls.jpg'},
+    {city: 'Orlando, FL', img: 'images/travel/orlando.jpg'},
+    {city: 'Miami, FL', img: 'images/travel/miami.jpg'},
+    {city: 'Catalina Island, CA', img: 'images/travel/ci.jpg'},
+];
+
+let carouselIndex =0;
+function carouselUpdate() {
+    const place = carouselPlaces[carouselIndex];
+
+    //try load city name
+    document.getElementById('carousel-city').textContent=place.city + "✦";
+    document.getElementById('carousel-placeholder').textContent = place.city;
+
+    // tryto load image
+    const slide = document.getElementById('carousel-slide');
+    const existingImg = slide.querySelector('img');
+    if (existingImg) existingImg.remove();
+
+    const img = document.createElement('img');
+    img.src = place.img;
+    img.alt = place.city;
+    img.onerror = function() { this.remove(); };
+    slide.appendChild(img);
+
+    // update count
+    document.getElementById('carousel-count').textContent =
+        (carouselIndex + 1) + ' / ' + carouselPlaces.length;
+
+    //update dots
+    const dotsEl = document.getElementById('carousel-dots');
+    dotsEl.innerHTML = '';
+    carouselPlaces.forEach(function(_, i) {
+        const dot = document.createElement('div');
+        dot.className = 'carousel-dot' + (i === carouselIndex ? ' active' : '');
+        dotsEl.appendChild(dot);
+    });
+}
+
+function carouselNext() {
+    carouselIndex = (carouselIndex + 1) % carouselPlaces.length;
+    carouselUpdate();
+}
+
+function carouselPrev() {
+    carouselIndex = (carouselIndex - 1 + carouselPlaces.length) % carouselPlaces.length;
+    carouselUpdate();
+}
+
+// initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    carouselUpdate();
+});
+
+//travel lightbox
+
+function openTravelLightbox() {
+    updateTravelLightbox();
+    document.getElementById('travel-lightbox').classList.add('open');
+
+    // keyboard navigation
+    document.addEventListener('keydown', travelLightboxKeydown);
+}
+
+function closeTravelLightbox() {
+    document.getElementById('travel-lightbox').classList.remove('open');
+    document.removeEventListener('keydown', travelLightboxKeydown);
+}
+
+function travelLightboxKeydown(e) {
+    if (e.key === 'Escape') closeTravelLightbox();
+    if (e.key === 'ArrowRight') travelLightboxNext();
+    if (e.key === 'ArrowLeft') travelLightboxPrev();
+}
+
+function travelLightboxNext() {
+    carouselIndex = (carouselIndex + 1) % carouselPlaces.length;
+    carouselUpdate();         // keep carousel in sync
+    updateTravelLightbox();
+}
+
+function travelLightboxPrev() {
+    carouselIndex = (carouselIndex - 1 + carouselPlaces.length) % carouselPlaces.length;
+    carouselUpdate();         // keep carousel in sync
+    updateTravelLightbox();
+}
+
+function updateTravelLightbox() {
+    const place = carouselPlaces[carouselIndex];
+
+    // city name
+    document.getElementById('tlb-city').textContent = place.city + ' ✦';
+
+    // count
+    document.getElementById('tlb-count').textContent =
+        (carouselIndex + 1) + ' / ' + carouselPlaces.length;
+
+    // placeholder text
+    document.getElementById('tlb-placeholder').textContent = place.city;
+
+    // try to load image
+    const imgEl = document.getElementById('tlb-img');
+    imgEl.classList.remove('loaded');
+    imgEl.src = '';
+
+    const testImg = new Image();
+    testImg.onload = function() {
+        imgEl.src = place.img;
+        imgEl.classList.add('loaded');
+        document.getElementById('tlb-placeholder').style.display = 'none';
+    };
+    testImg.onerror = function() {
+        imgEl.classList.remove('loaded');
+        document.getElementById('tlb-placeholder').style.display = 'flex';
+    };
+    testImg.src = place.img;
+}
+
+// close if clicking outside the content
+document.getElementById('travel-lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeTravelLightbox();
+});
