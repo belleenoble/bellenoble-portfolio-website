@@ -122,7 +122,7 @@ const projects = [
         heroImage: 'images/audio-amplifier-kicad-schem.png',
         photoFiles: [
             'images/audio-amplifier-kicad-schem.png',
-            'images/pcb.png',
+            'images/pcb-schem.png',
             null, // Soldered Board photo coming soon
             null, // Test Setup photo coming soon
         ],
