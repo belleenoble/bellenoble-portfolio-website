@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-#Tada! : https://bellenoble-portfolio.vercel.app/
+# Tada! : https://bellenoble-portfolio.vercel.app/
 
 A interactive portfolio website built from scratch using HTML, CSS, and JavaScript to showcase my journey as a computer engineering student. This project highlights my skills, projects, and growth while demonstrating a solid front-end developement fundamental understanding. 
 
