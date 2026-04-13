@@ -112,7 +112,7 @@ const projects = [
         role: 'Class project — CMPE 110',
         timeline: '2024',
         stack: 'LTspice · KiCad · Soldering iron · Multimeter',
-        body: 'Designed a complete audio amplifier circuit from schematic to physical board. Started in LTspice — simulating the circuit and verifying gain characteristics, then moved into KiCad for PCB layout and routing. Once fabricated, I hand-soldered every component and tested with a function generator and oscilloscope. My first full hardware project and the one that got me hooked on the hardware side of engineering.',
+        body: 'Designed a complete audio amplifier circuit from schematic to physical board. Started in LTspice, simulating the circuit and verifying gain characteristics, then moved into KiCad for PCB layout and routing. Once fabricated, I plan to hand-solder every component and test with a function generator and oscilloscope. My first full hardware project and the one that got me hooked on the hardware side of engineering.',
         steps:[
             'Designed schematic in LTspice and ran simulations to verify gain',
             'Transffered schematic to KiCad and assigned footprints to all components',
