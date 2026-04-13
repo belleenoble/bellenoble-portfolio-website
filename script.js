@@ -61,13 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     targetPage.classList.add('active');
                 }
 
-                // Re-align timeline dots when About page is shown
-                if (targetPageId === 'page-about') {
-                    setTimeout(alignTimeline, 0);
+                if (targetPageId !== 'page-projects') {
+                    document.getElementById('projects-grid').classList.remove('hidden');
+                    document.getElementById('project-detail').classList.remove('open');
                 }
-
-                document.getElementById('projects-grid').classList.remove('hidden');
-                document.getElementById('project-detail').classList.remove('open');
                 
                 console.log('Navigated to:', targetPageId);
             }
@@ -110,30 +107,7 @@ const projects = [
         tags: ['Python', 'FastAPI', 'React', 'JavaScript', 'Git']
     },
     {
-        num: '02 — Computer Vision',
-        title: 'ASL Hand Sign Translator',
-        role: 'Solo project',
-        timeline: '2024',
-        stack: 'Python · OpenCV · MediaPipe · NumPy',
-        body: 'Built a real-time American Sign Language hand sign recognition system using Python and OpenCV. The app uses MediaPipe hand landmark detection to track 21 keypoints on the hand per frame, then maps those positions to ASL letters and displays the translation live on screen. This project taught me how computer vision pipelines actually work end-to-end.',
-        steps: [
-            'Set up MediaPipe hand landmark dectection pipeline',
-            'Captured and normalized 21 hand keypoints coordinates per frame',
-            '[IN PROGRESS] Built classifier to map keypoint positions to ASL letters',
-            'Added real-time overlay displaying the detected letter on the video feed'
-        ],
-        
-        photos: ['Live Demo', 'Hand Landmark Overlay', 'Detection Output' ,'Code Structure'],
-        challenges: [
-            {title: 'Similar hand shapes', text: 'There are some ASL letters that look nearly identical from one perspective, distinguishing them requires fine-tuning the keypoint thresholds, which I am still currently working on.'},
-            {title: 'Learning OpenCV', text: 'I took on this project because it relates to me on a personal level, and to challenge myself with open frameworks, however learning this was drastically different from what I have been learning during my studies, so it was incredibly hard to grasp the concepts and required a lot of research.'}
-        ],
-        outcome: 'A real-time ASL translator that correctly identifies letters from live webcam input with intermediate accuracy under normal lighting.',
-
-        tags: ['Python', 'OpenCV', 'MediaPipe', 'NumPy']
-    },
-    {
-        num: '03 — Hardware',
+        num: '02 — Hardware',
         title: 'Audio Amplifier — PCB Design',
         role: 'Class project — CMPE 110',
         timeline: '2024',
@@ -159,6 +133,31 @@ const projects = [
         ],
         outcome: ' Expected Outcome: A working audio amplifier PCB that produces clean amplified audio.',
         tags: ['LTspice', 'KiCad', 'PCB', 'Soldering', 'Hardware']
+    },
+    {
+        
+        num: '03 — Computer Vision',
+        title: 'ASL Hand Sign Translator',
+        role: 'Solo project',
+        timeline: '2024',
+        stack: 'Python · OpenCV · MediaPipe · NumPy',
+        body: 'Built a real-time American Sign Language hand sign recognition system using Python and OpenCV. The app uses MediaPipe hand landmark detection to track 21 keypoints on the hand per frame, then maps those positions to ASL letters and displays the translation live on screen. This project taught me how computer vision pipelines actually work end-to-end.',
+        steps: [
+            'Set up MediaPipe hand landmark dectection pipeline',
+            'Captured and normalized 21 hand keypoints coordinates per frame',
+            '[IN PROGRESS] Built classifier to map keypoint positions to ASL letters',
+            'Added real-time overlay displaying the detected letter on the video feed'
+        ],
+        
+        photos: ['Live Demo', 'Hand Landmark Overlay', 'Detection Output' ,'Code Structure'],
+        challenges: [
+            {title: 'Similar hand shapes', text: 'There are some ASL letters that look nearly identical from one perspective, distinguishing them requires fine-tuning the keypoint thresholds, which I am still currently working on.'},
+            {title: 'Learning OpenCV', text: 'I took on this project because it relates to me on a personal level, and to challenge myself with open frameworks, however learning this was drastically different from what I have been learning during my studies, so it was incredibly hard to grasp the concepts and required a lot of research.'}
+        ],
+        outcome: 'A real-time ASL translator that correctly identifies letters from live webcam input with intermediate accuracy under normal lighting.',
+
+        tags: ['Python', 'OpenCV', 'MediaPipe', 'NumPy']
+
     },
     {
         num: '04 — Design & Dev',
@@ -226,6 +225,13 @@ const projects = [
             'Designed the counter logic using flip=flops and sequential logic',
             'Wrote Verilog code for the 4-bit counter module',
             'Simulated behavior in a testbench to verify correct counting'
+        ],
+        heroImage: 'images/hero-4bit.png',
+        photoFiles: [
+            'images/4-bit.png',
+            'images/waveform.png',
+            'images/logic-diagram.png',
+            'images/4bit-tb.png'
         ],
         photos:['Verilog code', 'Simulation Waveform', 'Sequential Logic Diagram', 'Testbench Code'],
         challenges: [
@@ -498,3 +504,52 @@ function updateTravelLightbox() {
 document.getElementById('travel-lightbox').addEventListener('click', function(e) {
     if (e.target === this) closeTravelLightbox();
 });
+
+
+//contact form
+async function submitForm() {
+    const name    = document.getElementById('form-name').value.trim();
+    const email   = document.getElementById('form-email').value.trim();
+    const subject = document.getElementById('form-subject').value.trim();
+    const message = document.getElementById('form-message').value.trim();
+    const status  = document.getElementById('form-status');
+    const btn     = document.querySelector('.contact-form-submit');
+
+    // basic validation
+    if (!name || !email || !message) {
+        status.textContent = '⚠ Please fill in name, email and message.';
+        status.className = 'contact-form-status error';
+        return;
+    }
+
+    // disable button while sending
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+        const response = await fetch('https://formspree.io/f/xdaynvbg', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, subject, message })
+        });
+
+        if (response.ok) {
+            status.textContent = '✓ Message sent! I\'ll get back to you soon.';
+            status.className = 'contact-form-status success';
+            btn.textContent = 'Sent ✓';
+
+            // clear form
+            document.getElementById('form-name').value = '';
+            document.getElementById('form-email').value = '';
+            document.getElementById('form-subject').value = '';
+            document.getElementById('form-message').value = '';
+        } else {
+            throw new Error('Failed');
+        }
+    } catch (err) {
+        status.textContent = '✕ Something went wrong. Try emailing me directly.';
+        status.className = 'contact-form-status error';
+        btn.textContent = 'Send it →';
+        btn.disabled = false;
+    }
+}

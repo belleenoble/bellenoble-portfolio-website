@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset = "UTF-8">
-    <meta name="viewport" content = "width=device-width, intial-scale=1.0">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
     <title> Belle Noble - Computer Engineering Portfolio
     </title>
@@ -89,7 +89,7 @@
                             <div class="field-val">A.A - Lemoore College</div>
                         </div>
                     </div>
-                </div>
+                </div> <!-- Closes .home-top -->
 
                 <!--bottom section (stamp)-->
                 <div class ="home-bottom">
@@ -553,7 +553,7 @@
 
                     <!--frameworks/libaries-->
                     <div class="about-skill-category-label" style="margin-top: 16px;">Frameworks & Libraries</div>
-                    <div class="about=skill-tags">
+                    <div class="about-skill-tags">
                         <span class="about-skill-tag">React</span>
                         <span class="about-skill-tag">FastAPI</span>
                         <span class="about-skill-tag">OpenCV</span>
@@ -769,7 +769,117 @@
 
         </div> <!-- closes bsides-content -->
     </div> <!-- closes page-bsides -->
+    <!-- contact page -->
+    <div class="page" id="page-contact">
 
+    <div class="contact-blob1"></div>
+    <div class="contact-blob2"></div>
+
+    <div class="contact-grid">
+
+        <!-- LEFT -->
+        <div class="contact-left">
+        <div class="contact-left-top">
+
+            <div class="contact-eyebrow">Get in touch</div>
+            <div class="contact-headline">Let's build<br>something <em>real.</em></div>
+            <div class="contact-subline">Open to any opportunities — feel free to leave a message!</div>
+
+            <div class="contact-status">
+            <div class="contact-status-dot"></div>
+            <div class="contact-status-text">Open to internships · Summer 2026</div>
+            </div>
+
+            <div class="contact-links">
+            <a class="contact-link-row" href="mailto:belle.noble@sjsu.edu">
+                <div class="contact-link-left">
+                <div class="contact-link-name">Email</div>
+                <div class="contact-link-val">belle.noble@sjsu.edu</div>
+                </div>
+                <div class="contact-link-arrow">→</div>
+            </a>
+            <a class="contact-link-row" href="https://github.com/belleenoble" target="_blank">
+                <div class="contact-link-left">
+                <div class="contact-link-name">GitHub</div>
+                <div class="contact-link-val">github.com/belleenoble</div>
+                </div>
+                <div class="contact-link-arrow">→</div>
+            </a>
+            <a class="contact-link-row" href="https://linkedin.com/in/belle-noble" target="_blank">
+                <div class="contact-link-left">
+                <div class="contact-link-name">LinkedIn</div>
+                <div class="contact-link-val">linkedin.com/in/belle-noble</div>
+                </div>
+                <div class="contact-link-arrow">→</div>
+            </a>
+            </div>
+
+            <div class="contact-stamps">
+            <a class="contact-stamp" href="resume/belle-noble-resume.pdf" target="_blank">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span class="contact-stamp-label">Resume</span>
+            </a>
+            <a class="contact-stamp" href="https://github.com/belleenoble" target="_blank">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+                <span class="contact-stamp-label">GitHub</span>
+            </a>
+            <a class="contact-stamp" href="https://linkedin.com/in/belle-noble" target="_blank">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+                </svg>
+                <span class="contact-stamp-label">LinkedIn</span>
+            </a>
+            </div>
+
+        </div>
+
+        <div class="contact-footer">©2025 · Belle Noble · Computer Engineering</div>
+        </div>
+
+        <!-- RIGHT — form -->
+        <div class="contact-right">
+        <div class="contact-form-title">Send a message</div>
+        <div class="contact-form-sub"> Feel free to reach out regarding opportunities or collaborations, my inbox is open.</div>
+
+        <form id="contact-form">
+
+            <div class="contact-form-group">
+                <label class="contact-form-label">Name</label>
+                <input class="contact-form-input" type="text" id="form-name" placeholder="Your name">
+            </div>
+
+            <div class="contact-form-group">
+                <label class="contact-form-label">Email</label>
+                <input class="contact-form-input" type="email" id="form-email" placeholder="your@email.com">
+            </div>
+
+            <div class="contact-form-group">
+                <label class="contact-form-label">Subject</label>
+                <input class="contact-form-input" type="text" id="form-subject" placeholder="Internship opportunity, collaboration...">
+            </div>
+
+            <div class="contact-form-group">
+                <label class="contact-form-label">Message</label>
+                <textarea class="contact-form-textarea" id="form-message" placeholder="What's on your mind?"></textarea>
+            </div>
+
+            <div class="contact-form-status" id="form-status"></div>
+
+            <button type="button" class="contact-form-submit" onclick="submitForm()">Send it →</button>
+
+        </form>
+        </div>
+
+    </div>
+    </div>
     </div> <!-- Closes .pages -->
 
     <!--LightBox Overlay (for images to pop since they are small)-->
