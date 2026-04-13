@@ -148,8 +148,14 @@ const projects = [
             '[IN PROGRESS] Built classifier to map keypoint positions to ASL letters',
             'Added real-time overlay displaying the detected letter on the video feed'
         ],
-        
-        photos: ['Live Demo', 'Hand Landmark Overlay', 'Detection Output' ,'Code Structure'],
+        heroImage: 'images/hero-asl.jpg',
+        photoFiles: [
+            'images/output-asl.jpg',
+            'images/hand-schem.jpg',
+            'images/mediapipe-series-hand-solutions-graph.jpg',
+            'images/asl-code.png'
+        ],
+        photos: ['Live Demo', 'Hand Landmark Overlay', 'MediaPipe Series Hand Solution Chart' ,'Code Structure'],
         challenges: [
             {title: 'Similar hand shapes', text: 'There are some ASL letters that look nearly identical from one perspective, distinguishing them requires fine-tuning the keypoint thresholds, which I am still currently working on.'},
             {title: 'Learning OpenCV', text: 'I took on this project because it relates to me on a personal level, and to challenge myself with open frameworks, however learning this was drastically different from what I have been learning during my studies, so it was incredibly hard to grasp the concepts and required a lot of research.'}
