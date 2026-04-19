@@ -123,7 +123,7 @@ const projects = [
         photoFiles: [
             'images/audio-amplifier-kicad-schem.png',
             'images/pcb-schem.png',
-            null, // Soldered Board photo coming soon
+            'images/solder.jpg',
             null, // Test Setup photo coming soon
         ],
         photos: ['KiCad schematic', 'KiCad PCB Layout', 'Soldered Board - Coming Soon', 'Test Setup - Coming Soon'],
