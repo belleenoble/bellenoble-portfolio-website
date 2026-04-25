@@ -190,7 +190,7 @@ nav {
 }
 
 .nav-logo {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size:15px;
     font-weight:500;
     letter-spacing: 3px;
@@ -208,7 +208,7 @@ nav {
 /*stripping the default button styles for each of the links*/
 
 .nav-link {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size:10px;
     letter-spacing: 1.5px;
     color: var(--ink-light);
@@ -237,7 +237,7 @@ nav {
 
 /*status indicator*/
 .nav-status {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size:10px;
     font-weight:500;
     color: var(--green);
@@ -322,7 +322,7 @@ body.dark .icon-moon {display:none;}
 }
 
 .home-eyebrow {
-    font-family:'Geist Mono', monospace;
+    font-family:'IBM Plex Mono', monospace;
     font-size:10px;
     letter-spacing:3px;
     color: var(--green);
@@ -367,7 +367,7 @@ body.dark .icon-moon {display:none;}
 }
 
 .field-label {
-    font-family: 'Giest Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
     color: var(--green);
 }
@@ -388,7 +388,7 @@ body.dark .icon-moon {display:none;}
     display:inline-block;
     border: 2px solid var(--red);
     color: var(--red);
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 2px;
     padding: 5px 12px;
@@ -398,7 +398,7 @@ body.dark .icon-moon {display:none;}
 }
 
 .home-frame-num {
-    font-family: 'Geist Mono',monospace;
+    font-family: 'IBM Plex Mono',monospace;
     font-size:10px;
     color:var(--ink-faint);
     letter-spacing:1px;
@@ -468,7 +468,7 @@ body.dark .home-right::after {
 }
 
 .strip-label {
-    font-family:'Geist Mono', monospace;
+    font-family:'IBM Plex Mono', monospace;
     font-size:9px;
     letter-spacing:2.5px;
     color:var(--ink-light);
@@ -476,7 +476,7 @@ body.dark .home-right::after {
 }
 
 .strip-count {
-  font-family: 'Geist Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 9px;
   color: var(--ink-faint);
 }
@@ -527,7 +527,7 @@ body.dark .home-right::after {
 }
 
 .frame-num {
-  font-family: 'Geist Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
   color: var(--ink-faint);
   min-width: 24px;
@@ -541,7 +541,7 @@ body.dark .home-right::after {
 }
 
 .frame-sub {
-  font-family: 'Geist Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
   color: var(--ink-light);
   letter-spacing: 0.5px;
@@ -594,7 +594,7 @@ body.dark .home-right::after {
     color: var(--green);
 }
 .projects-count {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: var(--ink-faint);
     letter-spacing:1px;
@@ -648,7 +648,7 @@ body.dark .home-right::after {
 }
 
 .project-card-placeholder {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     color:rgba(255,255,255,0.3);
     letter-spacing:2px;
@@ -670,7 +670,7 @@ body.dark .home-right::after {
 }
 
 .project-card-body {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size:9px;
     letter-spacing:2px;
     color:var(--ink-faint);
@@ -701,7 +701,7 @@ body.dark .home-right::after {
 }
 
 .tag {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     letter-spacing: 1px;
     padding: 3px 9px;
@@ -739,7 +739,7 @@ body.dark .home-right::after {
 }
 
 .back-btn {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -772,7 +772,7 @@ body.dark .home-right::after {
 }
 
 .detail-num {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 2px;
     color: var(--ink-faint);
@@ -798,7 +798,7 @@ body.dark .home-right::after {
 }
 
 .detail-meta-label {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     letter-spacing: 2px;
     color: var(--ink-faint);
@@ -832,7 +832,7 @@ body.dark .home-right::after {
 }
 
 .back-btn {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -857,7 +857,7 @@ body.dark .home-right::after {
 }
 
 .detail-num {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 2px;
     color: var(--ink-faint);
@@ -879,7 +879,7 @@ body.dark .home-right::after {
 }
 
 .detail-tree-folder {   /*header row*/
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size:9px;
     letter-spacing:1.5px;
     color: var(--ink-light);
@@ -903,7 +903,7 @@ body.dark .home-right::after {
 }
 
 .detail-row-label { 
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size:9px;
     color: var(--green);
     padding:14px 12px;
@@ -929,7 +929,7 @@ body.dark .home-right::after {
 }
 
 .detail-hero-placeholder {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: var(--ink-faint);
     letter-spacing: 2px;
@@ -950,7 +950,7 @@ body.dark .home-right::after {
 }
 
 .detail-meta-label {
-    font-family:'Giest Mono', monospace;
+    font-family:'IBM Plex Mono', monospace;
     font-size:8px;
     letter-spacing: 2px;
     color: var(--ink-faint);
@@ -987,7 +987,7 @@ body.dark .home-right::after {
 }
 
 .detail-step-num {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--green);
     min-width: 20px;
@@ -1025,7 +1025,7 @@ body.dark .home-right::after {
 }
 
 .detail-photo-label {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--ink-faint);
     letter-spacing: 1px;
@@ -1045,7 +1045,7 @@ body.dark .home-right::after {
 }
 
 .detail-challenge-title {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--green);
     margin-bottom: 5px;
@@ -1122,7 +1122,7 @@ body.dark .home-right::after {
 }
 
 .lightbox-caption {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     color: rgba(255, 255, 255, 0.5);
     letter-spacing: 2px;
@@ -1137,7 +1137,7 @@ body.dark .home-right::after {
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: color 0.2s;
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .lightbox-close:hover {
@@ -1159,7 +1159,7 @@ body.dark .home-right::after {
     right: 0;
     background: rgba(0, 0, 0, 0.6);
     color: rgba(255, 255, 255, 0.8);
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1252,7 +1252,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .about-initials {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 20px; color: #fff;
     display:flex;
     align-items:center;
@@ -1268,7 +1268,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 .about-name em { font-style: italic; color: var(--green); }
 
 .about-sub {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size:9px; color: var(--ink-light);
     margin-top: 4px; letter-spacing: 1px;
 }
@@ -1283,7 +1283,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
     padding: 10px 14px;
     border:2px solid var(--green);
     color: var(--green);
-    font-family:'Geist Mono', monospace;
+    font-family:'IBM Plex Mono', monospace;
     cursor: pointer;
     background: none;
     text-decoration: none;
@@ -1299,6 +1299,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .about-stamp-label {
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 8px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1307,6 +1308,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 /*bio*/
 
 .about-bio {
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 13px; color: var(--ink-mid);
     line-height: 1.8;
     padding: 12px 16px;
@@ -1321,7 +1323,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .about-section-label {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px; letter-spacing: 2.5px;
     color: var(--green);
     text-transform: uppercase;
@@ -1396,7 +1398,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .about-tl-year {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--green);
     margin-bottom: 3px;
@@ -1409,7 +1411,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .about-tl-deg {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--ink-light);
     margin-top: 2px;
@@ -1417,7 +1419,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 
 .about-tl-gpa {
     display: inline-block;
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--green);
     background: var(--green-faint);
@@ -1450,7 +1452,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .about-skill-name {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px; color: var(--ink-mid);
     min-width: 90px;
 }
@@ -1468,14 +1470,14 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .about-skill-level {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px; color: var(--ink-faint);
     min-width: 70px; text-align: right;
 }
 
 /* small label above each category group */
 .about-skill-category-label {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 8px;
     letter-spacing: 2px;
     color: var(--green);
@@ -1493,7 +1495,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .about-skill-tag {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     padding: 4px 10px;
     border: 1px solid var(--cream-darker);
@@ -1525,13 +1527,13 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .about-exp-org {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px; color: var(--green);
     margin-bottom: 2px;
 }
 
 .about-exp-date {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px; color: var(--ink-faint);
     margin-bottom: 8px;
 }
@@ -1619,7 +1621,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .bsides-eyebrow {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 3px;
     color: #7aaa48;
@@ -1670,7 +1672,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .cl-sub {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: #8a9a78;
     margin-top: 4px;
@@ -1683,14 +1685,14 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .cl-time {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
     color: #3a5a28;
     font-weight: 500;
 }
 
 .cl-type {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 7px;
     color: #8a9a78;
     letter-spacing: 1px;
@@ -1714,7 +1716,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .cassette-brand {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: rgba(200,240,69,0.25);
     letter-spacing: 1px;
@@ -1722,7 +1724,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .cassette-side {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
     color: #c8f045;
     letter-spacing: 1px;
@@ -1749,7 +1751,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 7px;
     color: rgba(200,240,69,0.25);
     letter-spacing: 2px;
@@ -1812,7 +1814,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .nr-label {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 7px;
     color: rgba(200,240,69,0.25);
     letter-spacing: 1px;
@@ -1820,7 +1822,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .nr-val {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 8px;
     color: #5aaa3a;
 }
@@ -1844,14 +1846,14 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 .track.playing { background: rgba(200,240,69,0.06); }
 
 .track-num {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: #3a5a28;
     min-width: 18px;
 }
 
 .track-name {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
     color: #2a4a1a;
     flex: 1;
@@ -1860,7 +1862,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 .track.playing .track-name { color: #7aaa48; }
 
 .track-dur {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: #3a5a28;
 }
@@ -1888,14 +1890,14 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .np-label {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: #3a5a28;
     letter-spacing: 1px;
 }
 
 .np-val {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     color: #5aaa3a;
 }
@@ -1930,7 +1932,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .cp-text {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--ink-mid)
 }
@@ -1950,7 +1952,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 .bsides-section { position: relative; z-index: 1; }
 
 .bsides-sec-label {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     letter-spacing: 2px;
     color: #3a6e28;
@@ -2023,7 +2025,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .carousel-btn {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
     color: var(--green);
     background: none;
@@ -2061,7 +2063,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 .carousel-dot.active { background: var(--green); }
 
 .carousel-count {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--ink-faint);
 }
@@ -2099,7 +2101,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 .bsides-film-row:last-of-type { border-bottom: none; }
 
 .bsides-film-n {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--ink-faint);
     min-width: 18px;
@@ -2107,7 +2109,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .bsides-film-note {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--ink-faint);
     margin-top: 8px;
@@ -2145,7 +2147,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
     right: 0;
     background: rgba(0,0,0,0.45);
     color: #fff;
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     letter-spacing: 1px;
     text-align: center;
@@ -2192,7 +2194,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .bsides-org-desc {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--ink-light);
     margin-top: 2px;
@@ -2200,7 +2202,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 
 /* courses */
 .bsides-cg-label {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 8px;
     color: var(--green);
     margin-bottom: 5px;
@@ -2209,7 +2211,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .bsides-cc {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     padding: 3px 8px;
     border: 1px solid #c8e6a8;
@@ -2272,7 +2274,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
     color: #3a5a28;
     letter-spacing: 2px;
@@ -2286,14 +2288,14 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 }
 
 .tlb-count {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     color: rgba(200,240,69,0.4);
     letter-spacing: 2px;
 }
 
 .tlb-btn {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 20px;
     color: #7aaa48;
     background: none;
@@ -2319,7 +2321,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
     font-size: 20px;
     color: rgba(200,240,69,0.4);
     cursor: pointer;
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     transition: color 0.2s;
 }
 
@@ -2329,7 +2331,7 @@ body.dark .about-blob2 { background: #1a3a10; opacity:0.4;}
 .carousel-hint {
     position: absolute;
     bottom: 8px; right: 12px;
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: rgba(255,255,255,0.9);
     letter-spacing: 1px;
@@ -2387,7 +2389,7 @@ body.dark .contact-blob2 { background: #1a3a10; opacity: 0.4; }
 }
 
 .contact-eyebrow {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 3px;
     color: var(--green);
@@ -2435,7 +2437,7 @@ body.dark .contact-blob2 { background: #1a3a10; opacity: 0.4; }
 }
 
 .contact-status-text {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: var(--green);
     letter-spacing: 1px;
@@ -2468,7 +2470,7 @@ body.dark .contact-blob2 { background: #1a3a10; opacity: 0.4; }
 }
 
 .contact-link-name {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     letter-spacing: 1.5px;
     color: var(--ink);
@@ -2507,7 +2509,7 @@ body.dark .contact-blob2 { background: #1a3a10; opacity: 0.4; }
     padding: 10px 16px;
     border: 2px solid var(--green);
     color: var(--green);
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     cursor: pointer;
     background: none;
     text-decoration: none;
@@ -2529,7 +2531,7 @@ body.dark .contact-blob2 { background: #1a3a10; opacity: 0.4; }
 }
 
 .contact-footer {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     color: var(--ink-faint);
     letter-spacing: 1px;
@@ -2565,7 +2567,7 @@ body.dark .contact-blob2 { background: #1a3a10; opacity: 0.4; }
 }
 
 .contact-form-label {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 9px;
     letter-spacing: 2px;
     color: var(--ink-faint);
@@ -2613,7 +2615,7 @@ body.dark .contact-blob2 { background: #1a3a10; opacity: 0.4; }
     color: var(--cream);
     border: none;
     padding: 14px;
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -2627,7 +2629,7 @@ body.dark .contact-blob2 { background: #1a3a10; opacity: 0.4; }
 }
 
 .contact-form-status {
-    font-family: 'Geist Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 1px;
     padding: 8px 0;
